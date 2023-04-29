@@ -1,0 +1,404 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Desarrollo web">
+        <meta name="description" content="Portafolio de desarrollo web">
+        <meta name="keywords" content="HTML, CSS, JavaScript, React">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Un poco de Makeup</title>
+
+    <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="https://scontent.fmex31-1.fna.fbcdn.net/v/t39.30808-6/343323947_553294480257381_3288436738485487882_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=F2mziDRdSbgAX96UaF8&_nc_ht=scontent.fmex31-1.fna&oh=00_AfCuovIGSCKNqs5wZQRZAK3VZ2NRe4nMl_DtADd8vP9ajw&oe=6451CC39">
+
+      <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!--iconos de boostrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<!--CSS-->
+<link href="styles.css" rel="stylesheet">
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&dislay=swap" rel="stylesheet">
+</head>
+    <body>
+
+        <!--Barra de navegacion-->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-toggler">
+                    <a class="navbar-brand" href="#">
+                        <img src="data:image/jpeg;base64,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" width="50" alt="Logo de la página web">
+                    </a>
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#Sobre mi">Un poco de mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Anécdotas">Anécdotas</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#consejos">Consejos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Section Hero-->
+        <section class="hero align-items-stretch">
+            <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+                <img class="hero-imagen-desarrollador rounded-circle" src="icon.jpg" alt="Yo">
+                <h1> Hola soy Monserrath Salas</h1>
+                <h2> Me encanta el maquillaje</h2>
+                <!--<h3> ".typeString( "Nos maquillamos por gusto Bonitas ya Somos')
+    "</h3>-->
+
+                <!--animación con 35 -->
+                <h2 class="text-primary mb-4" id="typewriter"></h2>
+            </div>
+            <div class="hero-inferior">
+                <img class="hero-inferior-imagen img-fluid" src="raldh.jpg" alt="WEB HTML.">
+            </div> 
+        </section>
+
+            <!--Sobre Desarrollo Web-->
+    <section id="Desarrollo Web" class="Que es el Maquillaje">
+        <div class="Contenedor">
+            <h2 class="Seccion-titulo"><center>¿Sabes que es el maquillaje?</center> </h2><br> 
+            <p class="seccion-texto">  Es la técnica destinada a realzar los rasgos faciales y simultáneamente 
+                disimular los defectos para conseguir mayor armonía.</p>
+        </div>
+    </section>
+
+    <!--Experiencia-->
+    <section class="Experiencia seccion-clara">
+        <div class="container text-center">
+            <div class="row">
+            <!--Desarrollo de experiencias-->
+            <div class="columna col-12 col-md-4">
+                <i class="bi bi-laptop"></i>
+                <p class="experiencia-titulo">Tecnicas de Maquillaje</p>
+                <p>Existen diferentes tecnicas de maquillaje no todas son iguales porque nuestra piel no es igual .</p>
+                <div class="badges-contenedor">
+                    <span class="badge text-bg-primary">Baking</span> 
+                    <span class="badge text-bg-primary">Contorno o contouring</span>
+                    <span class="badge text-bg-primary">Draping</span>
+                    <span class="badge text-bg-primary">Strobing</span>
+                </div>
+            </div>
+        
+        <!--Articulos-->
+        <div class="columna col-12 col-md-4">
+        <i class=" bi bi-laptop"></i>
+        <p class="experiencia-titulo">¿Qué es un Clean Makeup?</p> 
+        <p>Es la última tendencia en maquillaje. Después del brillo “piel de delfín ” o del “ esculpido suave ”,
+             es el momento de la belleza natural y una tez fresca y sonrosada sin mucho maquillaje.</p>
+        <div class="badges-contenedor">
+            <span class="badge text-bg-primary">Conciler</span>
+            <span class="badge text-bg-primary">Blush</span>
+            <span class="badge text-bg-primary">Rimel</span>
+        </div>
+        </div>
+
+        <!--Estudiante-->
+    <div class="columna col-12 col-md-4"> 
+        <i class="bi bi-laptop"></i>
+        <p class="experiencia-titulo">Productos más comprados </p>
+        <p>Skincare</p>
+        <p>Rostro</p>
+        <p>Ojos</p>
+        <div class="badges-contenedor">
+            <span class="badge text-bg-primary"> Primer </span>
+            <span class="badge text-bg-primary">Base</span>
+            <span class="badge text-bg-primary">Conciler</span> 
+            <span class="badge text-bg-primary">Lipstick</span>
+            <span class="badge text-bg-primary">Rimel</span>
+        </div>
+    </div>
+        </div>
+        </div>
+    </section>
+
+                <!--Proyectos -->
+     <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+            <h2 class="seccion-titulo texto-negro">Algunos Productos que me encantan</h2>
+            <h3 class="seccion-descripcion">Te comparto algunos de los mejores productos que encontrado</h3>
+            <!-- Galeria de Proyectos -->
+            <div class="container text-center proyectos-contenedor">
+                <div class="row">
+                    <!-- Proyecto 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="proyecto">
+                            <img src="https://cdn11.bigcommerce.com/s-npxzgv6b6l/images/stencil/338x338/products/189/1097/TO-DIE-MOND-1__00754.1677883211.jpg?c=1" alt="¿Por qué comprarlos?" width="220" height="220">
+                            <div class="overlay">
+                                <p>De lo mas nuevo </p>
+                                <div class="iconos-contenedor">
+                                    <a href="https://raldhcosmetics.com/" target="_blank" rel="noopener noreferrer">
+                                        |<i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="https://raldhcosmetics.com/to-die-mond/" target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-laptop"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyecto 2 -->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="proyecto"> 
+                                    <img src="data:image/jpeg;base64,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" alt="¿Que es RaldhCosmetics?">
+                                    <div class="overlay">
+                                        <p>¿Qué es Raldh Cosmetics?</p>
+                                        <div class="iconos-contenedor"> 
+                                            <a href="https://thehappening.com/raldh-cosmetics-daniela-rodrice/#:~:text=Raldh%20Cosmetics%C2%A0es%20una,de%20principio%20a%20fin." target="_blank" rel="noopener noreferrer">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                            <a href="https://www.youtube.com/watch?v=vCqyrFwoduI&pp=ygUWcXVlIGVzIHJhbGRoIGNvc21ldGljcw%3D%3D" target="_blank" rel="noopener noreferrer">
+                                                <i class="bi bi-laptop"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Proyecto 3 -->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="proyecto">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMQUu89duFBtVgl0N0IRJyHJLlp7mIqLeRuA&usqp=CAU" alt="Proyecto 1">
+                                    <div class="overlay">
+                                        <p>¿Que es Kenia Os Beauty?</p>
+                                        <div class="iconos-contenedor">
+                                            <a href="https://keniaosbeauty.com/#:~:text=La%20marca%20%E2%80%9CK%20Os%20Beauty%E2%80%9D%20fue%20dise%C3%B1ada%20para%20ti.%20Para%20ti%20que%20te%20gusta%20atreverte%20y%20ser%20t%C3%BA%20mismo" target="_blank" rel="noopener noreferrer">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                            <a href="https://youtu.be/YPMjgg7iQjg" target="_blank" rel="noopener noreferrer">
+                                                <i class="bi bi-laptop"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Proyecto 4 -->
+                        <div class="col-12 col-md-6 col-lg-4"> 
+                            <div class="proyecto">
+                                <img src="keniaosate-kenia-os.gif" alt="Proyecto 1">
+                                <div class="overlay">
+                                    <p>Acerca de Kenia os Beauty</p>
+                                    <div class="iconos-contenedor">
+                                        <a href="https://keniaosbeauty.com/#:~:text=%C2%BFPOR%20QU%C3%89%20SOMOS,otro%20nivel.%20%23KOsFreeBeauty" target="_blank" rel="noopener noreferrer">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/watch?v=lG0jPW613dE" target="_blank" rel="noopener noreferrer">
+                                            <i class="bi bi-laptop"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Proyecto 5 -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="proyecto">
+                                <img src="data:image/jpeg;base64,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" alt="Proyecto 1">
+                                <div class="overlay">
+                                    <p>Los lipstic de Kenia Os</p>
+                                    <div class="iconos-contenedor">
+                                        <a href="https://www.heraldobinario.com.mx/tendencias/2021/11/22/kenia-os-beauty-cuanto-cuesta-donde-comprar-el-kit-de-labiales-de-la-youtuber-precios-18819.html#:~:text=Podr%C3%A1s%20adquirir%20tus%20labiales,899%20pesos%20mexicanos." target="_blank" rel="noopener noreferrer">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/watch?v=lG0jPW613dE" target="_blank" rel="noopener noreferrer">
+                                            <i class="bi bi-laptop"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <!-- Proyecto 6 -->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="proyecto">
+                                    <img src="raldh.jpg" alt="Proyecto 1">
+                                    <div class="overlay">
+                                        <p>¿Paleta de Sombras?</p>
+                                        <div class="iconos-contenedor">
+                                            <a href="https://raldhcosmetics.com/Sisterhood-2/" target="_blank" rel="noopener noreferrer">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                            <a href="https://raldhcosmetics.com/Sisterhood-1/b" target="_blank" rel="noopener noreferrer">
+                                                <i class="bi bi-laptop"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer"> 
+                        <button type="button" class="btn btn-info">
+                            Averigua más
+                            <i class="bi bi-arrow-right-circle-fill"></i>
+                        </button>
+                    </a>
+                </section>
+
+                <!-- Articulos -->
+                <section class="articulos justify-content-start"> 
+                    <h2 class="seccion-titulo texto-negro">Tecnicas de Maquillaje</h2>
+                    <div class="card">
+                        <div class="card-header">
+                            Más recientes
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <a href="https://www.bing.com/ck/a?!&&p=b9dc4e599b5eae9eJmltdHM9MTY4MjcyNjQwMCZpZ3VpZD0zNTVmMWQyOC02MGU2LTZiNTMtMDAxNC0wZmRjNjFhNzZhZjUmaW5zaWQ9NTE4NQ&ptn=3&hsh=3&fclid=355f1d28-60e6-6b53-0014-0fdc61a76af5&psq=clean+makeup&u=a1aHR0cHM6Ly93d3cubXVqZXJob3kuY29tL2JlbGxlemEvbWFxdWlsbGFqZS9jbGVhbi1tYWtldXAtdGVuZGVuY2lhLXZpcmFsLWxvb2stbWFxdWlsbGFqZS1uYXR1cmFsLWZhdm9yZWNlZG9yLTIwMjIwMTI4MDk1OTQ3LW50Lmh0bWw&ntb=1" target="_blank" rel="noopener noreferrer">
+                                <li class="list-group-item"> 
+                                    Que es el Clean Makeup 
+                                </li>
+                            </a>
+                            <a href="https://www.bing.com/ck/a?!&&p=274c3c69edea92e7JmltdHM9MTY4MjcyNjQwMCZpZ3VpZD0zNTVmMWQyOC02MGU2LTZiNTMtMDAxNC0wZmRjNjFhNzZhZjUmaW5zaWQ9NTE5Mg&ptn=3&hsh=3&fclid=355f1d28-60e6-6b53-0014-0fdc61a76af5&psq=draping&u=a1aHR0cHM6Ly93d3cudm9ndWUubXgvYmVsbGV6YS9hcnRpY3Vsby9kcmFwaW5nLXRlY25pY2EtZGUtbWFxdWlsbGFqZS1wYXJhLWVzY3VscGlyLWVsLXJvc3Rybw&ntb=1" target="_blank" rel="noopener noreferrer">
+                                <li class="list-group-item">
+                                    Draping
+                                </li>
+                            </a>
+                            <a href="https://www.bing.com/ck/a?!&&p=16bf7af80de958a9JmltdHM9MTY4MjcyNjQwMCZpZ3VpZD0zNTVmMWQyOC02MGU2LTZiNTMtMDAxNC0wZmRjNjFhNzZhZjUmaW5zaWQ9NTE5Nw&ptn=3&hsh=3&fclid=355f1d28-60e6-6b53-0014-0fdc61a76af5&psq=baking+maquillaje&u=a1aHR0cHM6Ly93d3cubWF5YmVsbGluZS5jb20ubXgvdHJ1Y29zLWRlLW1hcXVpbGxhamUvYmFraW5nLW1ha2V1cA&ntb=1" target="_blank" rel="noopener noreferrer">
+                                <li class="list-group-item">
+                                    ¿Qué es Baking?
+                                </li>
+                            </a>
+                            <a href="https://www.bing.com/ck/a?!&&p=2a7b9bf9026cafd9JmltdHM9MTY4MjcyNjQwMCZpZ3VpZD0zNTVmMWQyOC02MGU2LTZiNTMtMDAxNC0wZmRjNjFhNzZhZjUmaW5zaWQ9NTIwMg&ptn=3&hsh=3&fclid=355f1d28-60e6-6b53-0014-0fdc61a76af5&psq=contouring&u=a1aHR0cHM6Ly93d3cubXVqZXJlc2ZlbWVuaW5hcy5jb20vYmVsbGV6YS9jb250b3VyaW5n&ntb=1" target="_blank" rel="noopener noreferrer">
+                                <li class="list-group-item">
+                                 Contouring
+                                </li>
+                            </a>
+                            <a href="https://www.bing.com/ck/a?!&&p=0f4f42b8935e8ba2JmltdHM9MTY4MjcyNjQwMCZpZ3VpZD0zNTVmMWQyOC02MGU2LTZiNTMtMDAxNC0wZmRjNjFhNzZhZjUmaW5zaWQ9NTE4OA&ptn=3&hsh=3&fclid=355f1d28-60e6-6b53-0014-0fdc61a76af5&psq=strobing&u=a1aHR0cHM6Ly93d3cubWF5YmVsbGluZS5jby90cnVjb3MtZGUtbWFxdWlsbGFqZS9zdHJvYmluZw&ntb=1" target="_blank" rel="noopener noreferrer">
+                                <li class="list-group-item">
+                                    Strobing
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <a href="https://www.bing.com/ck/a?!&&p=535fed347e61ecf8JmltdHM9MTY4MjcyNjQwMCZpZ3VpZD0zNTVmMWQyOC02MGU2LTZiNTMtMDAxNC0wZmRjNjFhNzZhZjUmaW5zaWQ9NTIwMg&ptn=3&hsh=3&fclid=355f1d28-60e6-6b53-0014-0fdc61a76af5&psq=curso+de+maquillaje&u=a1aHR0cHM6Ly9lZHV0aW4uY29tL2N1cnNvLWRlLW1hcXVpbGxhamU&ntb=1" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="btn btn-info">
+                        MÁS INFORMACIÓN
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </a>
+            </section>
+
+    <!--Testimonios--><!--Descripcion--> 
+    <section id="testimonios" class="testimonios seccion-clara">
+            <h2 class="seccion-titulo">Descripcion</h2> 
+            <h3 class="seccion-descripcion">Descripcion de proyectos</h3>
+
+    <!--Carrusel--> <!--Cambiar Las fotos y alt-->
+        <!-- Carrusel -->
+        <div id="testimonios-carrusel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <img class="testimonio-imagen rounded-circle" src="icon.jpg" alt="Foto de Monse">
+                        <p class="testimonio-texto">El maquillaje sirve para resaltar la belleza, no para crearla. Rodéate de maquillaje, no de negatividad. 
+                            El maquillaje es arte. </p>
+                        <div class="testimonio-info">
+                            <p class="cliente">Monserrath Salas Carbajal</p>
+                            <p class="cargo">Aprendis de Maquillaje Profecional </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <img class="testimonio-imagen rounded-circle" src="keniaosate-kenia-os.gif" alt="Foto de Kenia">
+                        <p class="testimonio-texto">Kenia OS Beauty La marca “K Os Beauty” fue diseñada para ti. Para ti que te gusta atreverte y ser tú mismo.</p>
+                        <div class="testimonio-info">
+                            <p class="cliente">Kenia</p>
+                            <p class="cargo">Emprendedora en el mundo del Maquillaje</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <img class="testimonio-imagen rounded-circle" src="daniela.jpg" alt="Foto de Daniela">
+                        <p class="testimonio-texto">Raldh cosmetics es el  NUEVO emprendimiento de una influencer Mazatleca Daniela Rodrice</p> 
+                        <div class="testimonio-info">
+                            <p class="cliente">Daniela</p>
+                            <p class="cargo">Influencer en el mundo del maquillaje</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!--contacto-->
+    <section id="contacto" class="contacto seccion-oscura">
+            <div class="container">
+                    <div class="container text-center rectangulo d-flex justify-content-evenly">
+                            <div class="row">
+                                    <div class="col-12 col-md-4 seccion-titulo">
+                                            ¡Sigamos en contacto!
+                                    </div>
+                                    <div class="col-12 col-md-4 descripcion">
+                                            ¡Para más informacion contactame!
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                            <a href="https://www.facebook.com/monse.rivera.7334?mibextid=ZbWKwL">
+                                                <button type="button">
+                                                        Contacto
+                                                <i class="bi bi-envelope-check-fill"></i>
+                                                </button>
+                                            </a>
+            </div>
+            </div>
+            </div>
+            </div>
+    </section>
+
+    <!--pie de pagina (footer)--><!--Cambiar imagen de Logo-->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+         <img class="footer-logo" src="keniaosate-kenia-os.gif" alt="logo del portafolio"> 
+         <p class="footer-texto text-center">Aprende y disfruta del Maquillaje sin limites</p>
+         <div class="iconos-redes sociales d-flex flex-wrap align-items-center justify-content-center"> 
+                <a href="https://twitter.com/mon_sc7?t=4DGvASt5fbKV6I7u8Ck0vA&s=09" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-twitter"></i>
+                    </a>
+
+      <a href="https://github.com/Monnc" target="_blank" rel="noopener noreferrer"> 
+             <i class="bi bi-github"></i>
+      </a>
+       <a href="https://www.linkedin.com/in/monserrath-salas-carbajal-3a7646274/" target="_blank" rel="noopener noreferrer">
+           <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/monse.rivera.7334?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/monserrath-salas-carbajal-3a7646274/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-envelope"></i>
+      </a>
+      </div>
+       <div class="derechos-de-autor">Creado por Monserrath Salas</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="java.js"></script>
+
+
+    </body>
+    </html>
